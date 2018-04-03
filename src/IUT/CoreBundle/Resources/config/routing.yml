@@ -1,0 +1,15 @@
+iut_core_onepagehome:
+    path:     /
+    defaults: { _controller: IUTCoreBundle:Core:onepage }
+
+iut_core_home:
+    path:     /accueil
+    defaults: { _controller: IUTCoreBundle:Core:home }
+
+iut_core_listperso:
+    path:     /perso
+    defaults: { _controller: IUTCoreBundle:Core:listperso }
+
+iut_core_pageperso:
+    path:     /perso/{id}
+    defaults: { _controller: IUTCoreBundle:Core:pageperso }

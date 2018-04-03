@@ -1,0 +1,4 @@
+iut_admin_homepage:
+    path:     /
+    defaults: { _controller: IUTAdminBundle:Admin:index }
+

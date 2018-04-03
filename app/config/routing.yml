@@ -1,0 +1,7 @@
+iut_admin:
+    resource: "@IUTAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+iut_core:
+    resource: "@IUTCoreBundle/Resources/config/routing.yml"
+    prefix:   /

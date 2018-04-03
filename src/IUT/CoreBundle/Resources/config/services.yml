@@ -1,0 +1,4 @@
+services:
+#    iut_core.example:
+#        class: IUT\CoreBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
