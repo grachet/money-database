@@ -1,0 +1,61 @@
+
+html,
+body,
+header,
+#intro {
+    height: 95%;
+}
+
+#intro {
+    background: url("../img/photo_iut.JPG")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.top-nav-collapse {
+    background-color: #303032!important;
+}
+
+footer {
+
+    background-color:  #303032;
+}
+
+.icon-background{
+
+    color:  #FF9800!important;
+}
+
+h2 {
+    color : #303032!important;
+
+}
+
+h4 {
+    color : #303032!important;
+
+}
+
+#darkdiv {
+
+     background-color: #F2F2F2!important;
+
+ }
+
+#darkdiv2 {
+
+    background-color: #F2F2F2!important;
+
+}
+
+
+input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=search-md]:focus:not([readonly]), input[type=search]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=url]:focus:not([readonly]), textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #FF9800!important;
+    box-shadow: 0 1px 0 0 #FF9800!important;
+}
+
+.md-form input[type=text]:focus:not([readonly]) + label { color: #FF9800!important; }
+.md-form input[type=email]:focus:not([readonly]) + label { color: #FF9800!important; }
+.md-form textarea[type=text]:focus:not([readonly]) + label { color: #FF9800!important; }

@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad41a1e0-934c-4ee7-b677-9bfd1fc2814e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/IUT/AdminBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/IUT/AdminBundle/Resources/views/Default/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/AdminBundle/Resources/public/css/mdb.min.css" afterPath="$PROJECT_DIR$/src/IUT/AdminBundle/Resources/public/css/mdb.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/AdminBundle/Resources/public/js/mdb.min.js" afterPath="$PROJECT_DIR$/src/IUT/AdminBundle/Resources/public/js/mdb.min.js" />
       <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/css/main.css" afterPath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/js/agency.min.js" afterPath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/js/agency.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_portfolio.scss" afterPath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_portfolio.scss" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/js/agency.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_contact.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_footer.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_global.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_masthead.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_mixins.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_navbar.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_portfolio.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_services.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_team.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_timeline.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/_variables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/scss/agency.scss" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/Default/home.html.twig" afterPath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/Default/home.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/layout.html.twig" />
     </list>
@@ -49,8 +60,54 @@
       <file leaf-file-name="home.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/Default/home.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+            <state relative-caret-position="118">
+              <caret line="233" column="64" lean-forward="false" selection-start-line="233" selection-start-column="64" selection-end-line="233" selection-end-column="64" />
+              <folding>
+                <element signature="n#style#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#circle#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#path#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#2;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#3;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#4;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#5;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#6;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#7;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#8;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#0;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#1;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#rect#9;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#circle#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#path#0;n#g#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#circle#0;n#g#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#path#3;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#div#2;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="176" column="74" lean-forward="false" selection-start-line="176" selection-start-column="74" selection-end-line="176" selection-end-column="74" />
+              <folding>
+                <element signature="e#4587#4593#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-149">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -60,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/src/IUT/AdminBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
-              <caret line="16" column="29" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <caret line="16" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,36 +128,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="759">
               <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="106" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="agency.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/js/agency.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,6 +189,12 @@
       <find>anima</find>
       <find>portfoli</find>
       <find>portfolio</find>
+      <find>link</find>
+      <find>3.3</find>
+      <find>hr</find>
+      <find>notre</find>
+      <find>dark</find>
+      <find>mask</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,11 +221,11 @@
         <option value="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/IUT/CoreBundle/Controller/CoreController.php" />
         <option value="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/js/agency.min.js" />
-        <option value="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/Default/home.html.twig" />
-        <option value="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/css/main.css" />
         <option value="$PROJECT_DIR$/src/IUT/AdminBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/IUT/AdminBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/css/main.css" />
+        <option value="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/Default/home.html.twig" />
       </list>
     </option>
   </component>
@@ -250,8 +283,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -405,16 +437,6 @@
               <item name="IUT" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="projet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="IUT" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -514,12 +536,12 @@
       <workItem from="1522753821065" duration="10951000" />
       <workItem from="1522767307600" duration="13737000" />
       <workItem from="1522882548392" duration="7018000" />
-      <workItem from="1522925091511" duration="1475000" />
+      <workItem from="1522925091511" duration="13000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33181000" />
+    <option name="totallyTimeSpent" value="44706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -569,7 +591,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#2;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#3;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#4;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#5;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#6;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#7;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#8;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#0;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#1;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#9;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#g#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#0;n#g#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#3;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#div#2;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -585,7 +631,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2323">
           <caret line="101" column="209" lean-forward="false" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="209" />
-          <folding />
+          <folding>
+            <element signature="e#4587#4593#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -649,7 +697,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2024">
           <caret line="88" column="45" lean-forward="false" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="45" />
-          <folding />
+          <folding>
+            <element signature="e#4587#4593#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -657,7 +707,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1334">
           <caret line="58" column="64" lean-forward="false" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#2;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#3;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#4;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#5;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#6;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#7;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#8;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#0;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#1;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#9;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#g#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#0;n#g#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#3;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#div#2;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -705,7 +779,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
           <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#2;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#3;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#4;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#5;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#6;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#7;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#8;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#0;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#1;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#9;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#g#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#0;n#g#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#3;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#div#2;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -723,7 +821,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1104">
           <caret line="48" column="10" lean-forward="false" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#4587#4593#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -813,6 +913,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IUT/AdminBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IUT/AdminBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/IUT/CoreBundle/Controller/CoreController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -823,41 +939,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IUT/CoreBundle/Resources/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IUT/AdminBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="-149">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="106" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IUT/AdminBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="342">
+          <caret line="176" column="74" lean-forward="false" selection-start-line="176" selection-start-column="74" selection-end-line="176" selection-end-column="74" />
+          <folding>
+            <element signature="e#4587#4593#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IUT/CoreBundle/Resources/views/Default/home.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="118">
+          <caret line="233" column="64" lean-forward="false" selection-start-line="233" selection-start-column="64" selection-end-line="233" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#2;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#3;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#4;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#5;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#6;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#7;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#8;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#0;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#1;n#g#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#rect#9;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#g#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#circle#0;n#g#1;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#3;n#svg#0;n#div#0;n#div#0;n#div#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#div#2;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
