@@ -8,7 +8,3 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
 .md-form textarea[type=text]:focus:not([readonly]) + label { color: #FF9800!important; }
 .md-form input[type=password]:focus:not([readonly]) + label { color: #FF9800!important; }
 
-p {
-    color : #303032!important;
-
-}

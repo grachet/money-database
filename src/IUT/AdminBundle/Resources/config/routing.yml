@@ -1,4 +1,7 @@
 iut_admin_homepage:
-    path:     /
-    defaults: { _controller: IUTAdminBundle:Admin:index }
+    path:     /home
+    defaults: { _controller: IUTAdminBundle:Admin:home }
 
+iut_admin_connect:
+    path:     /
+    defaults: { _controller: IUTAdminBundle:Admin:connect }
