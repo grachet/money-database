@@ -5,3 +5,39 @@ iut_admin_homepage:
 iut_admin_connect:
     path:     /
     defaults: { _controller: IUTAdminBundle:Admin:connect }
+
+iut_admin_modProfil:
+    path:     /modifier/profil
+    defaults: { _controller: IUTAdminBundle:Admin:modProfil }
+
+iut_admin_addCurrencies:
+    path:     /ajouter/devise
+    defaults: { _controller: IUTAdminBundle:Admin:addCurrencies }
+
+iut_admin_addCoins:
+    path:     /ajouter/piece
+    defaults: { _controller: IUTAdminBundle:Admin:addCoins }
+
+iut_admin_modPass:
+    path:     /modifier/motdepasse
+    defaults: { _controller: IUTAdminBundle:Admin:modPass }
+
+iut_admin_tabUsers:
+    path:     /table/utilisateurs
+    defaults: { _controller: IUTAdminBundle:Admin:tabUsers }
+
+iut_admin_tabImages:
+    path:     /table/images
+    defaults: { _controller: IUTAdminBundle:Admin:tabImages }
+
+iut_admin_tabFiles:
+    path:     /table/fichiers
+    defaults: { _controller: IUTAdminBundle:Admin:tabFiles }
+
+iut_admin_tabCoins:
+    path:     /table/pièces
+    defaults: { _controller: IUTAdminBundle:Admin:tabCoins }
+
+iut_admin_tabCurrencies:
+    path:     /table/devises
+    defaults: { _controller: IUTAdminBundle:Admin:tabCurrencies }

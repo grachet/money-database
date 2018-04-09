@@ -1,0 +1,38 @@
+{% extends "IUTAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Erobot - Erreur: {{ status_text }}
+{% endblock %}
+
+    {% block stylesheets %}
+    {% endblock %}
+
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+
+    <div style="height: 100vh">
+        <div class="flex-center flex-column text-center">
+            <h1 class="animated fadeIn mb-4">Erobot</h1>
+
+            <h5 class="animated fadeIn mb-3">Oops!</h5>
+
+            <p class="animated fadeIn text-muted">Le serveur a retourné une erreur : "{{ status_code }} {{ status_text }}"</p>
+            <br>
+            <a href="{{ path('iut_core_home') }}"><button type="button" class="animated fadeIn btn btn-outline-warning waves-effect px-3"><i class="fa fa-home" aria-hidden="true"></i> Accueil</button></a>
+        </div>
+    </div>
+
+{% endblock %}
+{% block navbar %}
+
+
+
+{% endblock %}
+{% block customscript %}
+
+
+
+{% endblock %}

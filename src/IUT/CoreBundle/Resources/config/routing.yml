@@ -4,3 +4,6 @@ iut_core_home:
     path:     /
     defaults: { _controller: IUTCoreBundle:Core:home }
 
+iut_core_perso:
+    path:     /perso/{id}
+    defaults: { _controller: IUTCoreBundle:Core:pagePerso }

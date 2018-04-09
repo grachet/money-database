@@ -1,0 +1,110 @@
+{% extends "IUTAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Modifier profil  {{ parent() }}
+{% endblock %}
+
+{% block breadcrumb %}
+    Modifier le profil
+{% endblock %}
+
+
+
+{% block main %}
+
+    <div class="row">
+<!--Grid column-->
+<div class="col-md-4 ">
+
+
+    <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
+
+        <!--Card image-->
+        <div class="view white">
+            <img src="{{ user.urlPicture }}"
+                 class="img-fluid" alt="photo de profil">
+        </div>
+        <!--/.Card image-->
+
+        <!--Card content-->
+        <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{ user.name }}</h4>
+            <!--Text-->
+            <p class="card-text">{{ user.description }}</p>
+
+
+
+        </div>
+        <!--/.Card content-->
+
+    </div>
+
+
+</div>
+<!--Grid column-->
+
+
+<!-- Grid column -->
+<div class="col-md-8 mt-5">
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-warning" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    <!--Panel-->
+    <div class="card card-body mb-4">
+        <p class="h4 text-center mb-4">Modifier votre profil</p>
+        {{ form_start(form) }}
+
+        {# Les erreurs générales du formulaire. #}
+        {{ form_errors(form) }}
+
+
+
+        {# Génération manuelle et éclatée : #}
+        <div class="md-form mb-5">
+            {# Génération du label. #}
+            {{ form_label(form.name, "Votre nom") }}
+
+            {# Affichage des erreurs pour ce champ précis. #}
+            {{ form_errors(form.name) }}
+
+
+                {# Génération de l'input. #}
+                {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+
+        </div>
+
+        <div class="md-form mb-5">
+
+            {{ form_label(form.description, "Votre description") }}
+
+            {{ form_errors(form.description) }}
+
+            {{ form_widget(form.description, {'attr': {'class': 'md-textarea form-control'}}) }}
+
+        </div>
+
+        <div class="md-form mb-5">
+
+            {{ form_label(form.urlPicture, "Votre image") }}
+
+            {{ form_errors(form.urlPicture) }}
+
+            {{ form_widget(form.urlPicture, {'attr': {'class': 'form-control'}}) }}
+
+        </div>
+
+        {{ form_widget(form.Enregistrer, {'attr': {'class': 'btn btn-orange'}}) }}
+
+        {{ form_rest(form) }}
+
+        {{ form_end(form) }}
+    </div>
+    <!--/.Panel-->
+</div>
+    </div>
+    {% endblock %}

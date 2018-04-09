@@ -1,0 +1,122 @@
+{% extends "IUTCoreBundle::layout.html.twig" %}
+
+{% block title %} Erobot {% endblock %}
+
+{% block header %}
+
+<header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar smooth-scroll"
+         style="background-color: #212529">
+        <div class="container">
+
+            <!-- Navbar brand -->
+            <a class="navbar-brand " href="#page-top">Erobot</a>
+
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+
+
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto  mx-5">
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="{{ path('iut_core_home') }}">Accueil</a>
+                    </li>
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="{{ path("iut_admin_homepage") }}">Modifier ma page</a>
+                    </li>
+                </ul>
+                <!-- Links -->
+
+
+            </div>
+            <!-- Collapsible content -->
+
+        </div>
+    </nav>
+    <!--/.Navbar-->
+
+    {% endblock %}
+
+    {% block main %}
+
+
+
+        <div class="container">
+
+            <div class="row mt-5 pt-5">
+
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4">
+
+
+                    <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
+
+                        <!--Card image-->
+                        <div class="view white">
+                            <img src="{{ user.urlPicture }}"
+                                 class="img-fluid" alt="photo de profil">
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">{{ user.name }}</h4>
+                            <!--Text-->
+                            <p class="card-text">{{ user.description }}</p>
+
+                            <p class="card-text"> Nombre de publications : {{ listFiles|length }}</p>
+
+
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+
+
+                </div>
+                <!--Grid column-->
+
+
+                <!-- Grid column -->
+                <div class="col-md-8 ">
+
+                    {% for file in listFiles %}
+                        <!--Panel-->
+                        <div class="card card-body mb-4">
+                            <h4 class="card-title">{{ file.name }}</h4>
+                            <p class="card-text">{{ file.description }}</p>
+                            <div class="flex-row ">
+                                <a href="{{ file.url }}" target="_blank" class="card-link "><i
+                                            class="fa fa-file-pdf-o"></i> PDF</a>
+                            </div>
+                        </div>
+                        <!--/.Panel-->
+
+                    {% endfor %}
+
+
+                </div>
+                <!-- Grid column -->
+
+
+            </div>
+
+
+        </div>
+
+    {% endblock %}
+
+    {% block footer %}
+{% endblock %}

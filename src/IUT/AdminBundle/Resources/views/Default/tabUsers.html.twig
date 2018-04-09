@@ -1,0 +1,51 @@
+{% extends "IUTAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Table Users  {{ parent() }}
+{% endblock %}
+
+{% block breadcrumb %}
+    Table <i class="fa fa-chevron-right"></i> Users
+{% endblock %}
+
+
+
+{% block main %}
+
+    <div class="card card-body mb-4">
+        <!--Table-->
+        <table class="table table-hover">
+
+            <!--Table head-->
+            <thead>
+            <tr class="orange lighten-3">
+                <th>Id</th>
+                <th>Login</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Url de l'Image</th>
+            </tr>
+            </thead>
+            <!--Table head-->
+
+            <!--Table body-->
+            <tbody>
+            {% for user in listUsers %}
+            <tr>
+
+                <td>{{ user.id }}</td>
+                <td>{{ user.login }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.description }}</td>
+                <td>{{ user.urlPicture }}</td>
+
+            </tr>
+            {% endfor  %}
+            </tbody>
+            <!--Table body-->
+
+        </table>
+        <!--Table-->
+    </div>
+
+{% endblock %}

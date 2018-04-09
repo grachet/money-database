@@ -1,0 +1,53 @@
+{% extends "IUTAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Table Files  {{ parent() }}
+{% endblock %}
+
+{% block breadcrumb %}
+    Table <i class="fa fa-chevron-right"></i> Files
+{% endblock %}
+
+
+
+{% block main %}
+
+    <div class="card card-body mb-4">
+        <!--Table-->
+        <table class="table table-hover">
+
+            <!--Table head-->
+            <thead>
+            <tr class="orange lighten-3">
+                <th>Id</th>
+                <th>User_id</th>
+                <th>Propriétaire</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Url</th>
+            </tr>
+            </thead>
+            <!--Table head-->
+
+            <!--Table body-->
+            <tbody>
+            {% for files in listFiles %}
+                <tr>
+
+                    <td>{{ files.id }}</td>
+                    <td>{{ files.users.id }}</td>
+                    <td>{{ files.users.name }}</td>
+                    <td>{{ files.name}}</td>
+                    <td>{{ files.description }}</td>
+                    <td>{{ files.url }}</td>
+
+                </tr>
+            {% endfor  %}
+            </tbody>
+            <!--Table body-->
+
+        </table>
+        <!--Table-->
+    </div>
+
+{% endblock %}
