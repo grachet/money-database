@@ -348,7 +348,7 @@
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="350" />
     <option name="y" value="34" />
     <option name="width" value="975" />
@@ -588,12 +588,12 @@
       <workItem from="1523793853972" duration="18082000" />
       <workItem from="1523884581800" duration="6730000" />
       <workItem from="1523892685798" duration="13225000" />
-      <workItem from="1523972095202" duration="10290000" />
+      <workItem from="1523972095202" duration="10486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195247000" />
+    <option name="totallyTimeSpent" value="195443000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -605,7 +605,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19722815" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
