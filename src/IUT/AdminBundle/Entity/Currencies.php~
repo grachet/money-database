@@ -2,6 +2,7 @@
 
 namespace IUT\AdminBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,6 +29,17 @@ class Currencies
      */
     private $name;
 
+
+    /**
+     * One Product has Many Features.
+     * @ORM\OneToMany(targetEntity="Coins", mappedBy="Currencies")
+     */
+    private $Coins;
+
+
+    public function __construct() {
+        $this->Coins = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -62,5 +74,6 @@ class Currencies
     {
         return $this->name;
     }
-}
 
+
+}

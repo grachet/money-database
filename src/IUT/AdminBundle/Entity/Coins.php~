@@ -28,12 +28,22 @@ class Coins
      */
     private $value;
 
+
     /**
-     * @ORM\ManyToOne(targetEntity="IUT\AdminBundle\Entity\Currencies")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToMany(targetEntity="IUT\AdminBundle\Entity\Images", mappedBy="Coins")
+     */
+    private $Images;
+
+    public function __construct() {
+        $this->Images = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="IUT\AdminBundle\Entity\Currencies", inversedBy="Coins")
+     * @ORM\JoinColumn(name="Currencies_id", referencedColumnName="id")
      */
     private $Currencies;
-
 
     /**
      * Get id

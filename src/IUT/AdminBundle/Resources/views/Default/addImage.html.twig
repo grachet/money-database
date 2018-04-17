@@ -1,0 +1,115 @@
+{% extends "IUTAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Ajouter Image  {{ parent() }}
+{% endblock %}
+
+{% block breadcrumb %}
+    Ajouter <i class="fa fa-chevron-right"></i> Image
+{% endblock %}
+
+
+
+{% block main %}
+
+
+<div class="row">
+        <!-- Grid column -->
+        <div class="col-md-8 mt-5">
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-warning" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            <!--Panel-->
+            <div class="card card-body mb-4">
+                <p class="h4 text-center mb-4">Ajouter une image (2mo max)</p>
+                {{ form_start(form) }}
+
+                {# Les erreurs générales du formulaire. #}
+                {{ form_errors(form) }}
+
+
+
+                {# Génération manuelle et éclatée : #}
+                <div class="md-form mb-5">
+                    {# Génération du label. #}
+                    {{ form_label(form.name, "Nom") }}
+
+                    {# Affichage des erreurs pour ce champ précis. #}
+                    {{ form_errors(form.name) }}
+
+
+                    {# Génération de l'input. #}
+                    {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+
+                </div>
+
+                {# Génération manuelle et éclatée : #}
+                <div class="md-form mb-5">
+
+                    <div class="file-field">
+                        <div class="btn btn-orange btn-sm float-left">
+                            <span>Choisir une image</span>
+                            {{ form_widget(form.imageFile, {'attr': {'class': ''}}) }}
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Envoyer votre image sur le serveur">
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="form-check checkbox-orange mb-5">
+
+                    {# Affichage des erreurs pour ce champ précis. #}
+                    {{ form_errors(form.coins) }}
+
+
+
+                    {# Génération de l'input. #}
+                    {{ form_widget(form.coins, {'attr': {'class': 'form-control'}}) }}
+
+                </div>
+
+
+                {{ form_widget(form.Ajouter, {'attr': {'class': 'btn btn-orange'}}) }}
+
+
+                {{ form_rest(form) }}
+                {{ form_end(form) }}
+            </div>
+            <!--/.Panel-->
+    </div>
+
+
+
+<div class="col-md-4 mt-5">
+
+    <div class="card">
+
+        <img src="" alt="">
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}
+

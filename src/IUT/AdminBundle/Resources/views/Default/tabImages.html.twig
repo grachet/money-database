@@ -20,9 +20,9 @@
             <thead>
             <tr class="orange lighten-3">
                 <th>Id</th>
-                <th>Coins_id</th>
                 <th>Name</th>
-                <th>url</th>
+                <th>Nom du fichier</th>
+                <th>Coins_id</th>
                 <th>Valeur</th>
                 <th>Devise</th>
             </tr>
@@ -32,17 +32,20 @@
             <!--Table body-->
             <tbody>
             {% for image in listImages %}
-                <tr>
 
-                    <td>{{ image.id }}</td>
-                    <td>{{ image.coins.id }}</td>
-                    <td>{{ image.name }}</td>
-                    <td>{{ image.url }}</td>
-                    <td>{{ image.coins.value }}</td>
-                    <td>{{ image.coins.currencies.name }}</td>
 
-                </tr>
-            {% endfor  %}
+                {% for coin in image.coins %}
+                    <tr>
+                        <td>{% if loop.first %}{{ image.id }}{% endif %}</td>
+                        <td>{% if loop.first %}{{ image.name }}{% endif %}</td>
+                        <td>{% if loop.first %}{{ image.image }}{% else %}<i class="fa fa-circle-o"></i>{% endif %}</td>
+                        <td>{{ coin.id }}</td>
+                        <td>{{ coin.value }}</td>
+                        <td>{{ coin.currencies.name }}</td>
+                    </tr>
+                {% endfor %}
+
+            {% endfor %}
             </tbody>
             <!--Table body-->
 

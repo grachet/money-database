@@ -1,11 +1,11 @@
 {% extends "IUTAdminBundle::layout.html.twig" %}
 
 {% block title %}
-    Modifier mot de passe  {{ parent() }}
+    Ajouter Devise  {{ parent() }}
 {% endblock %}
 
 {% block breadcrumb %}
-    Modifier le mot de passe
+    Ajouter <i class="fa fa-chevron-right"></i> Devise
 {% endblock %}
 
 
@@ -25,6 +25,7 @@
                     <tr class="orange lighten-3">
 
                         <th>Devises actuelles</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <!--Table head-->
@@ -35,6 +36,7 @@
                         <tr>
 
                             <td>{{ currencie.name }}</td>
+                            <td><a href="{{ path('iut_admin_delete',{'id': currencie.id, 'classe': 'Currencies'}) }}"><i class="fa fa-remove"></a></i></td>
 
                         </tr>
                     {% endfor %}

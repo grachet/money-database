@@ -2,16 +2,117 @@
 {% extends "IUTAdminBundle::layout.html.twig" %}
 
 {% block title %}
-  Accueil  {{ parent() }}
+    Accueil  {{ parent() }}
 {% endblock %}
 
 {% block breadcrumb %}
-Home
+    Home
 {% endblock %}
 
-
-
 {% block main %}
+
+    <div class="row mb-3 text-center ">
+
+
+            <div class="col-md-3  mb-2">
+                <a href="{{ path("iut_admin_addCoins") }}">
+                <div class="card card-body orange p-2 text-white">
+                    <span> <i class="fa fa-circle-o"></i> Pièces : {{ nbCoins }}</span>
+                </div>
+                </a>
+            </div>
+
+
+
+            <div class="col-md-3 ">
+                <a href="{{ path("iut_admin_addCurrencies") }}">
+                <div class="card card-body orange p-2  mb-2 text-white">
+                    <span> <i class="fa fa-dollar"></i> Devises : {{ nbCurrencies }}</span>
+                </div>
+                </a>
+            </div>
+
+
+
+            <div class="col-md-3 ">
+                <a href="{{ path("iut_admin_addImage") }}">
+                <div class="card card-body orange p-2  mb-2 text-white">
+                    <span> <i class="fa fa-image"></i> Images : {{ nbImages }}</span>
+                </div>
+                </a>
+            </div>
+
+
+
+            <div class="col-md-3 ">
+                <a href="{{ path("iut_admin_addFile") }}">
+                <div class="card card-body orange p-2  mb-2 text-white">
+                    <span> <i class="fa fa-file"></i> Fichier : {{ nbFiles }}</span>
+                </div>
+                </a>
+            </div>
+
+
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-3 col-md-4  mb-2">
+
+
+            <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
+
+                <!--Card image-->
+                <div class="view white">
+                    <img src="{{ asset('uploads/images/' ~ app.user.image) }}"
+                         class="img-fluid" alt="photo de profil">
+                </div>
+                <!--/.Card image-->
+
+                <!--Card content-->
+                <div class="card-body">
+                    <!--Title-->
+                    <h4 class="card-title">Bonjour </h4>
+                    <h5>{{ app.user.name }}</h5>
+
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+
+
+        </div>
+        <div class="col-lg-9 col-md-8 mt-2">
+
+            <div class="card elegant-color text-center z-depth-2 text-white mb-2">
+                <div class="card-body">
+                    <h4 class="text-center">Messages Admin</h4>
+                </div>
+            </div>
+
+
+            {% for file in listFiles %}
+                <!--Panel-->
+                <div class="card card-body mb-2">
+                    <p class="card-text">{{ file.description }}</p>
+
+                </div>
+                <!--/.Panel-->
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
 
 
 {% endblock %}

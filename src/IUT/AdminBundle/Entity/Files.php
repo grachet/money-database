@@ -3,12 +3,15 @@
 namespace IUT\AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * Files
  *
  * @ORM\Table(name="files")
  * @ORM\Entity(repositoryClass="IUT\AdminBundle\Repository\FilesRepository")
+ * @Vich\Uploadable
  */
 class Files
 {
@@ -22,11 +25,22 @@ class Files
     private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="url", type="string", length=255, nullable=true)
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
      */
-    private $url;
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $nameFile;
+
+    /**
+     * @Vich\UploadableField(mapping="files", fileNameProperty="nameFile")
+     * @var File
+     */
+    private $file;
 
     /**
      * @var string
@@ -34,6 +48,7 @@ class Files
      * @ORM\Column(name="name", type="string", length=150)
      */
     private $name;
+
 
     /**
      * @var string
@@ -46,8 +61,7 @@ class Files
      * @ORM\ManyToOne(targetEntity="IUT\AdminBundle\Entity\Users")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $Users;
-
+    protected $Users;
 
 
     /**
@@ -58,6 +72,24 @@ class Files
     public function getId()
     {
         return $this->id;
+    }
+
+    public function setFile(File $fileName = null)
+    {
+        $this->file = $fileName;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($fileName) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->createdAt = new \DateTime('now');
+        }
+    }
+
+    public function getFile()
+    {
+        return $this->file;
     }
 
     /**
@@ -132,6 +164,8 @@ class Files
         return $this->description;
     }
 
+
+
     /**
      * Set users
      *
@@ -154,5 +188,53 @@ class Files
     public function getUsers()
     {
         return $this->Users;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return Files
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set nameFile
+     *
+     * @param string $nameFile
+     *
+     * @return Files
+     */
+    public function setNameFile($nameFile)
+    {
+        $this->nameFile = $nameFile;
+
+        return $this;
+    }
+
+    /**
+     * Get nameFile
+     *
+     * @return string
+     */
+    public function getNameFile()
+    {
+        return $this->nameFile;
     }
 }

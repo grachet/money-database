@@ -21,7 +21,7 @@
 
         <!--Card image-->
         <div class="view white">
-            <img src="{{ user.urlPicture }}"
+            <img src="{{ asset('uploads/images/' ~ user.image) }}"
                  class="img-fluid" alt="photo de profil">
         </div>
         <!--/.Card image-->
@@ -90,13 +90,29 @@
 
         <div class="md-form mb-5">
 
-            {{ form_label(form.urlPicture, "Votre image") }}
+            {{ form_label(form.email, "Votre email") }}
 
-            {{ form_errors(form.urlPicture) }}
+            {{ form_errors(form.email) }}
 
-            {{ form_widget(form.urlPicture, {'attr': {'class': 'form-control'}}) }}
+            {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
 
         </div>
+
+        {# Génération manuelle et éclatée : #}
+        <div class="md-form mb-5">
+
+            <div class="file-field">
+                <div class="btn btn-orange btn-sm float-left">
+                    <span>Choisir une image</span>
+                    {{ form_widget(form.imageFile, {'attr': {'class': ''}}) }}
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Envoyer votre image de profil sur le serveur">
+                </div>
+            </div>
+        </div>
+
+
 
         {{ form_widget(form.Enregistrer, {'attr': {'class': 'btn btn-orange'}}) }}
 

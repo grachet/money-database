@@ -3,14 +3,18 @@
 namespace IUT\AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * Users
  *
- * @ORM\Table(name="Users")
+ * @ORM\Table(name="fos_user")
  * @ORM\Entity(repositoryClass="IUT\AdminBundle\Repository\UsersRepository")
+ * @Vich\Uploadable
  */
-class Users
+class Users extends BaseUser
 {
     /**
      * @var int
@@ -19,108 +23,48 @@ class Users
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     public function __construct()
     {
-        $this->urlPicture       = "https://d34jodf30bmh8b.cloudfront.net/pictures/5661/5804/profile-1474295964-7c5694e2fc409f9ba430e094fee7f906.jpg";
+        parent::__construct();
+        $this->urlPicture = "http://www.aesvt-maroc.com/wp-content/uploads/2016/09/profil.jpg";
 
     }
 
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="login", type="string", length=100)
-     */
-    private $login;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=256)
-     */
-    private $password;
 
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=100, nullable=true)
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      *
      * @ORM\Column(name="description", type="text", nullable=true)
      */
-    private $description;
+    protected $description;
 
     /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="string", length=255)
      * @var string
-     *
-     * @ORM\Column(name="urlPicture", type="string", length=255, nullable=true)
      */
-    private $urlPicture;
-
+    private $image;
 
     /**
-     * Get id
-     *
-     * @return int
+     * @Vich\UploadableField(mapping="images", fileNameProperty="image")
+     * @var File
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $imageFile;
 
-    /**
-     * Set login
-     *
-     * @param string $login
-     *
-     * @return Users
-     */
-    public function setLogin($login)
-    {
-        $this->login = $login;
-
-        return $this;
-    }
-
-    /**
-     * Get login
-     *
-     * @return string
-     */
-    public function getLogin()
-    {
-        return $this->login;
-    }
-
-    /**
-     * Set password
-     *
-     * @param string $password
-     *
-     * @return Users
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Get password
-     *
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
 
     /**
      * Set name
@@ -170,27 +114,75 @@ class Users
         return $this->description;
     }
 
+
+
     /**
-     * Set urlPicture
+     * Set createdAt
      *
-     * @param string $urlPicture
+     * @param \DateTime $createdAt
      *
      * @return Users
      */
-    public function setUrlPicture($urlPicture)
+    public function setCreatedAt($createdAt)
     {
-        $this->urlPicture = $urlPicture;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
 
     /**
-     * Get urlPicture
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Users
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
      *
      * @return string
      */
-    public function getUrlPicture()
+    public function getImage()
     {
-        return $this->urlPicture;
+        return $this->image;
     }
+
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->createdAt = new \DateTime('now');
+        }
+    }
+
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+
 }

@@ -1,0 +1,84 @@
+{% extends "IUTAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Visionner Images  {{ parent() }}
+{% endblock %}
+
+{% block breadcrumb %}
+    Visionner <i class="fa fa-chevron-right"></i> <a class="text-dark" href="{{ path('iut_admin_viewImages') }}"  >Images</a>  <i class="fa fa-chevron-right"></i> Triées
+{% endblock %}
+
+
+{% block main %}
+
+
+
+
+    {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+
+
+
+
+
+
+
+
+    <div class="d-flex align-content-around flex-wrap">
+
+
+
+
+        <div class="col-3 p-4 ">
+
+<div class="form-control">
+            {{ form_start(form, { 'attr': { 'class': '' } }) }}
+
+            {{ form_widget(form) }}
+            <div class="ml-2 mb-2">
+                <input type="submit" class="btn btn-orange" value="Actualiser" />
+            </div>
+            {{ form_end(form) }}
+</div>
+
+        </div>
+
+
+
+
+
+        {% for image in listImages %}
+
+            <div class="col-md-3 p-2">
+
+
+                <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
+
+                    <!--Card image-->
+                    <div class="view white">
+                        <img src="{{ asset('uploads/images/' ~ image.image) }}"
+                             class="img-fluid" alt="image de pièce">
+                        <a href="{{ asset('uploads/images/' ~ image.image) }}">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--/.Card image-->
+
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h5 class="card-title"> Id : {{ image.id }}     Nom : {{ image.name }}</h5>
+                        <!--Text-->
+                        <a href="{{ asset('uploads/images/' ~ image.image) }}"    download style="color: #000"><i class="fa fa-download"></i></a>   
+                        <a href="{{ path('iut_admin_delete', {'id': image.id, 'classe': "ImagesSelected" })}}"  style="color: #000"><i class="fa fa-remove"></i></a>
+
+                    </div>
+                    <!--/.Card content-->
+
+                </div>
+
+
+            </div>
+            <!--Grid column-->
+        {% endfor %}
+    </div>
+{% endblock %}

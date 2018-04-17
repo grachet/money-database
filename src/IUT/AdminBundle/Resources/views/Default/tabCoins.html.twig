@@ -21,8 +21,9 @@
             <tr class="orange lighten-3">
                 <th>Id</th>
                 <th>Value</th>
-                <th>Currencies_id</th>
                 <th>Devise</th>
+                <th>Currencies_id</th>
+
             </tr>
             </thead>
             <!--Table head-->
@@ -34,8 +35,9 @@
 
                     <td>{{ coin.id }}</td>
                     <td>{{ coin.value }}</td>
-                    <td>{{ coin.currencies.id }}</td>
                     <td>{{ coin.currencies.name }}</td>
+                    <td>{{ coin.currencies.id }}</td>
+
 
                 </tr>
             {% endfor  %}

@@ -1,4 +1,4 @@
-{% extends "IUTCoreBundle::layout.html.twig" %} {% block title %} Erobot {% endblock %} {% block main %}
+{% extends "IUTCoreBundle::layout.html.twig" %} {% block title %} Accueil - Erobot{% endblock %} {% block main %}
     <!--Main layout-->
     <main class="mt-5">
         <div class="container">
@@ -20,9 +20,10 @@
                         <div class="col-md-8">
 
                             <!-- Description -->
-                            <p class="grey-text">Un bras mécanisé cherche à saisir pièces de monnaie sur un tapis
-                                roulant suivant certains critères. Il possède comme capteur une simple caméra lui
-                                fournissant des photographies.</p>
+                            <p>Sur un tapis roulant sont disposés plusieurs pièces, de valeur
+                                différente ou non. Comment pourrions-nous reconnaitre ces pièces, et les récupérer à
+                                l'aide d'un bras robotisé, afin d'obtenir une certaine somme totale ?</p>
+
 
                         </div>
                         <!--Grid column-->
@@ -40,7 +41,9 @@
               <i class="fa fa-camera fa-stack-1x fa-inverse"></i>
             </span>
                             <h4 class="my-4 font-weight-bold">Reconnaissance d'images</h4>
-                            <p class="grey-text">Reconnaitre la position des pièces sur une image</p>
+                            <p>Grâce aux images récupérées par la caméra, notre algorithme nous
+                                permettra de connaître la position, le diamètre, et la valeur des pièces sur le tapis
+                                roulant</p>
                         </div>
                         <!--Grid column-->
 
@@ -51,7 +54,9 @@
               <i class="fa fa-map fa-stack-1x fa-inverse"></i>
             </span>
                             <h4 class="my-4 font-weight-bold">Optimisation de trajets</h4>
-                            <p class="grey-text">Fournir au robot le trajet le plus optimisé pour récupérer les pièces
+                            <p>Pour que l'algorithme soit le plus performant possible, il est
+                                indispensable de réfléchir aux solutions les plus efficaces, et les plus rapides. Le
+                                bras mécanisé doit être le plus efficace, dans le temps le plus court possible
                             </p>
                         </div>
                         <!--Grid column-->
@@ -62,9 +67,11 @@
               <i class="fa fa-circle fa-stack-2x icon-background"></i>
               <i class="fa fa-database fa-stack-1x fa-inverse"></i>
             </span>
-                            <h4 class="my-4 font-weight-bold">Base de donnée</h4>
-                            <p class="grey-text">L'objectif est de créer une base de donnée en ligne d'images de
-                                monnaies
+                            <h4 class="my-4 font-weight-bold">Base de données</h4>
+                            <p>Afin de pouvoir reconnaître les pièces, et exploiter notre algorithme,
+                                nous devons avoir une base de données d'images nous servant de modèle. Dans cette base,
+                                nous aurons plusieurs images de pièces de même valeur, pour avoir une large référence
+                                d'images
                             </p>
                         </div>
                         <!--Grid column-->
@@ -141,7 +148,21 @@
                     </div>
 
                     <div class="col-md-7">
-                        L'explication du projet est simple j'ai juste la flemme de l'écrire
+                        Dans le cadre de nos études, il nous a été demandé de mener un projet incluant de l'algorithmie,
+                        du développement et de la gestion de projet. Le but de ce projet est de parvenir, grâce à un
+                        bras mécanisé et une caméra, à reconnaitre puis saisir des pièces de monnaie sur un tapis roulant
+                        selon certains critères. Pour parvenir à ce résultat, nous devons décomposer ce travail en trois
+                        parties :
+                        <br><br>
+                        <ul>
+                            <li>Vision par ordinateur</li>
+                            <li>Optimisation des tâches du robot</li>
+                            <li>Test et présentation des résultats</li>
+                        </ul>
+                        Le développement du projet se fera en C++ en utilisant OpenCV, et notre groupe est composé de 8
+                        personnes, réparties dans les différentes parties du projet
+                        <br><br>
+                        <strong>Nous vous invitons à cliquer sur les photos ci-dessous pour visionner les documents présents dans les pages personnels afin d'en apprendre plus sur le projet</strong>
 
                     </div>
 
@@ -164,47 +185,48 @@
 
                     <!-- Heading -->
                     <h2 class="my-2 font-weight-bold">Notre équipe</h2>
-                    <p class="grey-text mb-5">Chaque collaborateur dispose de sa propre page personnelle consultable et
+                    <p class=" mb-5">Chaque collaborateur dispose de sa propre page personnelle consultable et
                         éditable en ligne via la base de donnée</p>
                     <!--Grid row-->
                     <div class="row">
 
 
                         {% for Users in listUsers %}
+                            {% if (Users.username!="admin") and (Users.username!="guest") %}
 
-                            <!--Grid column-->
-                            <div class="col-lg-4 col-md-12 mb-4">
+                                <!--Grid column-->
+                                <div class="col-lg-4 col-md-12 mb-4">
 
 
-                                <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
+                                    <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
 
-                                    <!--Card image-->
-                                    <div class="view white">
-                                        <img src="{{ Users.urlPicture }}"
-                                             class="img-fluid" alt="">
-                                        <a href="{{ path('iut_core_perso', { 'id' : Users.id })  }}">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
+                                        <!--Card image-->
+                                        <div class="view white">
+                                            <img src="{{ asset('uploads/images/' ~ Users.image) }}"
+                                                 class="img-fluid" alt="">
+                                            <a href="{{ path('iut_core_perso', { 'id' : Users.id }) }}">
+                                                <div class="mask rgba-white-slight"></div>
+                                            </a>
+                                        </div>
+                                        <!--/.Card image-->
+
+                                        <!--Card content-->
+                                        <div class="card-body">
+                                            <!--Title-->
+                                            <h4 class="card-title">{{ Users.name }}</h4>
+                                            <!--Text-->
+                                            <p class="card-text">{{ Users.description }}</p>
+
+                                        </div>
+                                        <!--/.Card content-->
+
                                     </div>
-                                    <!--/.Card image-->
 
-                                    <!--Card content-->
-                                    <div class="card-body">
-                                        <!--Title-->
-                                        <h4 class="card-title">{{ Users.name }}</h4>
-                                        <!--Text-->
-                                        <p class="card-text">{{ Users.description }}</p>
-
-                                    </div>
-                                    <!--/.Card content-->
 
                                 </div>
+                                <!--Grid column-->
 
-
-                            </div>
-                            <!--Grid column-->
-
-
+                            {% endif %}
                         {% endfor %}
 
 
@@ -234,31 +256,83 @@
 
                         <!--Grid column-->
                         <div class="col-lg-6 col-md-12">
-                            <!-- Form contact -->
-                            <form class="px-2">
-                                <div class="md-form form-sm"><i class="fa fa-user prefix grey-text"></i>
-                                    <input type="text" id="form3" class="form-control form-control-sm">
-                                    <label for="form3">Votre nom</label>
-                                </div>
-                                <div class="md-form form-sm"><i class="fa fa-envelope prefix grey-text"></i>
-                                    <input type="text" id="form2" class="form-control form-control-sm">
-                                    <label for="form2">Votre email</label>
-                                </div>
-                                <div class="md-form form-sm"><i class="fa fa-tag prefix grey-text"></i>
-                                    <input type="text" id="form32" class="form-control form-control-sm">
-                                    <label for="form34">Sujet</label>
-                                </div>
-                                <div class="md-form form-sm"><i class="fa fa-pencil prefix grey-text"></i>
-                                    <textarea type="text" id="form8" class="md-textarea form-control form-control-sm"
-                                              rows="4"></textarea>
-                                    <label for="form8">Votre message</label>
-                                </div>
-                                <div class="text-center mt-4">
-                                    <button class="btn btn-orange">Envoyer <i class="fa fa-paper-plane-o ml-1"></i>
-                                    </button>
-                                </div>
-                            </form>
-                            <!-- Form contact -->
+
+
+                            {{ form_start(form) }}
+
+                            <div class="md-form mb-5"><i class="fa fa-user prefix grey-text"></i>
+                                {# Génération du label. #}
+                                {{ form_label(form.name, "Nom") }}
+
+                                {# Affichage des erreurs pour ce champ précis. #}
+                                {{ form_errors(form.name) }}
+
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+
+                            </div>
+
+                            <div class="md-form mb-5"><i class="fa fa-envelope prefix grey-text"></i>
+                                {# Génération du label. #}
+                                {{ form_label(form.email, "Email") }}
+
+                                {# Affichage des erreurs pour ce champ précis. #}
+                                {{ form_errors(form.email) }}
+
+
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+
+                            </div>
+
+
+
+                            <div class="md-form mb-5"><i class="fa fa-tag prefix grey-text"></i>
+                                {# Génération du label. #}
+                                {{ form_label(form.subject, "Sujet") }}
+
+                                {# Affichage des erreurs pour ce champ précis. #}
+                                {{ form_errors(form.subject) }}
+
+
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.subject, {'attr': {'class': 'form-control'}}) }}
+
+                            </div>
+
+                            <div class="md-form mb-5"><i class="fa fa-pencil prefix grey-text"></i>
+                                {# Génération du label. #}
+                                {{ form_label(form.message, "Message") }}
+
+                                {# Affichage des erreurs pour ce champ précis. #}
+                                {{ form_errors(form.message) }}
+
+
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.message, {'attr': {'class': 'md-textarea form-control'}}) }}
+
+                            </div>
+
+
+
+                            {# Render CSRF token etc .#}
+                            <div style="display:none">
+                                {{ form_rest(form) }}
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <input type="submit" class="btn btn-orange" value="Envoyer">
+                            </div>
+
+
+
+                            {{ form_end(form) }}
+
+
+
+
+
+
                         </div>
                         <!--Grid column-->
 

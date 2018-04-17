@@ -1,0 +1,81 @@
+{% extends "IUTAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Connexion  {{ parent() }}
+{% endblock %}
+
+    {% block stylesheets %}
+        {# On charge le CSS de bootstrap depuis le site directement #}
+        <link rel="stylesheet" href="{{ asset('bundles/iutadmin/css/connect.css') }}">
+    {% endblock %}
+
+
+{% block header %}
+
+{% endblock %}
+
+{% block body %}
+
+
+    <div style="height: 100vh">
+        <div class="flex-center flex-column">
+
+            <section class="form-simple ">
+
+                <!--Form with header-->
+                <div class="card">
+
+                    <!--Header-->
+                    <div class="header pt-3 grey lighten-2">
+
+                        {% block subtitle %}
+                        <div class="text-center">
+                            <img src="{{ asset('bundles/iutadmin/img/man.svg') }}" alt="profil" class="mb-2" width="200px">
+                        </div>
+                        {% endblock %}
+
+
+                    </div>
+
+                    {% for type, messages in app.session.flashBag.all %}
+                        {% for message in messages %}
+                            <div class=" aler alert-{{ type }} text-center" role="alert">
+                                {{ message|trans({}, 'FOSUserBundle') }}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                    <!--Header-->
+
+                    <div class="card-body mx-4 mt-4">
+
+
+
+                        {# On définit ce block, dans lequel vont venir s'insérer les autres vues du bundle #}
+                        {% block fos_user_content %}
+                        {% endblock fos_user_content %}
+
+
+
+                    </div>
+
+                </div>
+
+
+
+            </section>
+
+
+        </div>
+
+
+    </div>
+
+
+{% endblock %}
+{% block navbar %}
+
+
+
+{% endblock %}
+{% block customscript %}
+{% endblock %}

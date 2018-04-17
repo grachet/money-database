@@ -1,6 +1,6 @@
 {% extends "IUTCoreBundle::layout.html.twig" %}
 
-{% block title %} Erobot {% endblock %}
+{% block title %} Page Perso {{ user.name }} Erobot {% endblock %}
 
 {% block header %}
 
@@ -64,7 +64,7 @@
 
                         <!--Card image-->
                         <div class="view white">
-                            <img src="{{ user.urlPicture }}"
+                            <img src="{{ asset('uploads/images/' ~ user.image) }}"
                                  class="img-fluid" alt="photo de profil">
                         </div>
                         <!--/.Card image-->
@@ -98,8 +98,8 @@
                             <h4 class="card-title">{{ file.name }}</h4>
                             <p class="card-text">{{ file.description }}</p>
                             <div class="flex-row ">
-                                <a href="{{ file.url }}" target="_blank" class="card-link "><i
-                                            class="fa fa-file-pdf-o"></i> PDF</a>
+                                <a href="{{ asset('uploads/files/' ~ file.nameFile) }}" target="_blank" class="card-link text-warning"><i
+                                            class="fa fa-file-pdf-o "></i> PDF</a>
                             </div>
                         </div>
                         <!--/.Panel-->

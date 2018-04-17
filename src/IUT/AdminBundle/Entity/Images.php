@@ -3,12 +3,14 @@
 namespace IUT\AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 /**
  * Images
  *
  * @ORM\Table(name="images")
  * @ORM\Entity(repositoryClass="IUT\AdminBundle\Repository\ImagesRepository")
+ * @Vich\Uploadable
  */
 class Images
 {
@@ -22,17 +24,28 @@ class Images
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="IUT\AdminBundle\Entity\Coins")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToMany(targetEntity="IUT\AdminBundle\Entity\Coins", inversedBy="Images")
+     * @ORM\JoinTable(name="images_coins")
      */
     private $Coins;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="url", type="string", length=255)
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
      */
-    private $url;
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
 
     /**
      * @var string
@@ -40,6 +53,11 @@ class Images
      * @ORM\Column(name="name", type="string", length=100)
      */
     private $name;
+
+    public function __construct() {
+        $this->Coins = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->createdAt = new \DateTime('now');
+    }
 
 
     /**
@@ -50,30 +68,6 @@ class Images
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set url
-     *
-     * @param string $url
-     *
-     * @return Images
-     */
-    public function setUrl($url)
-    {
-        $this->url = $url;
-
-        return $this;
-    }
-
-    /**
-     * Get url
-     *
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->url;
     }
 
     /**
@@ -99,9 +93,7 @@ class Images
     {
         return $this->name;
     }
-
-
-
+    
     /**
      * Set coins
      *
@@ -116,13 +108,103 @@ class Images
         return $this;
     }
 
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->createdAt = new \DateTime('now');
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * Add coin
+     *
+     * @param \IUT\AdminBundle\Entity\Coins $coin
+     *
+     * @return Images
+     */
+    public function addCoin(\IUT\AdminBundle\Entity\Coins $coin)
+    {
+        $this->Coins[] = $coin;
+
+        return $this;
+    }
+
+    /**
+     * Remove coin
+     *
+     * @param \IUT\AdminBundle\Entity\Coins $coin
+     */
+    public function removeCoin(\IUT\AdminBundle\Entity\Coins $coin)
+    {
+        $this->Coins->removeElement($coin);
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Images
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
     /**
      * Get coins
      *
-     * @return \IUT\AdminBundle\Entity\Coins
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getCoins()
     {
         return $this->Coins;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return Images
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
     }
 }

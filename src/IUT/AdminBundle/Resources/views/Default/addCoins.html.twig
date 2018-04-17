@@ -1,11 +1,11 @@
 {% extends "IUTAdminBundle::layout.html.twig" %}
 
 {% block title %}
-    Modifier mot de passe  {{ parent() }}
+    Ajouter Pièce   {{ parent() }}
 {% endblock %}
 
 {% block breadcrumb %}
-    Modifier le mot de passe
+    Ajouter <i class="fa fa-chevron-right"></i> Pièce
 {% endblock %}
 
 
@@ -25,6 +25,7 @@
                     <tr class="orange lighten-3">
                         <th>Valeur</th>
                         <th>Devise</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <!--Table head-->
@@ -36,6 +37,7 @@
 
                             <td>{{ coin.value }}</td>
                             <td>{{ coin.currencies.name }}</td>
+                            <td><a href="{{ path('iut_admin_delete',{'id': coin.id, 'classe': 'Coins'}) }}"><i class="fa fa-remove"></a></i></td>
 
                         </tr>
                     {% endfor %}
@@ -84,7 +86,7 @@
 
                 </div>
 
-                <div class="form-check mb-5">
+                <div class="form-check radio-orange mb-5">
 
                     {# Affichage des erreurs pour ce champ précis. #}
                     {{ form_errors(form.currencies) }}

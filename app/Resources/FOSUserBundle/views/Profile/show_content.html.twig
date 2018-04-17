@@ -1,0 +1,7 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="fos_user_user_show text-center">
+    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    <a href="{{ path('iut_admin_homepage') }}"> <button type="button" class="btn btn-warning mt-4">Retour</button></a>
+</div>

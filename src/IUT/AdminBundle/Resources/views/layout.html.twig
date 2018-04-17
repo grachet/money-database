@@ -41,89 +41,106 @@
 
             <ul class="nav navbar-nav nav-flex-icons  text-center mt-2 mb-5 mr-3">
                 <li class="nav-item">
-                    <a href="{{ path('iut_core_home') }}"> <button type="button" class="btn btn-amber"><i class="fa fa-sign-out pr-2" aria-hidden="true"></i>retour</button></a>
+                    <a href="{{ path('iut_core_home') }}">
+                        <button type="button" class="btn btn-amber"><i class="fa fa-sign-out pr-2"
+                                                                       aria-hidden="true"></i>retour
+                        </button>
+                    </a>
                 </li>
             </ul>
 
-                    <ul class="collapsible collapsible-accordion">
-                        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-image"></i> Images<i class="fa fa-angle-down rotate-icon"></i></a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="#" class="waves-effect">Download zip</a>
-                                    </li>
-                                    <li><a href="#" class="waves-effect">Afficher images</a>
-                                    </li>
-                                    <li><a href="#" class="waves-effect">Ajouter image</a>
-                                    </li>
-                                    <li><a href="#" class="waves-effect">Trier images</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-dollar"></i> Monnaie<i class="fa fa-angle-down rotate-icon"></i></a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="{{ path('iut_admin_addCurrencies') }}" class="waves-effect">Ajouter devise</a>
-                                    </li>
-                                    <li><a href="{{ path('iut_admin_addCoins') }}" class="waves-effect">Ajouter pièce</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-user"></i> Mon profil<i class="fa fa-angle-down rotate-icon"></i></a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="{{ path('iut_admin_modProfil') }}" class="waves-effect">Modifier profil</a>
-                                    </li>
-                                    <li><a href="#" class="waves-effect">Ajouter fichier</a>
-                                    </li>
-                                    <li><a href="#" class="waves-effect">Supprimer fichier</a>
-                                    </li>
-                                    <li><a href="{{ path('iut_admin_modPass') }}" class="waves-effect">Modifier mot de passe</a>
-                                    </li>
+            <ul class="collapsible collapsible-accordion">
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-image"></i> Images<i
+                                class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
 
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-database"></i>Tables<i class="fa fa-angle-down rotate-icon"></i></a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="{{ path('iut_admin_tabUsers')}}" class="waves-effect"> Users</a>
-                                    </li>
-                                    <li><a href="{{ path('iut_admin_tabImages')}}" class="waves-effect"> Images</a>
-                                    </li>
-                                    <li><a href="{{ path('iut_admin_tabFiles')}}" class="waves-effect">Files</a>
-                                    </li>
-                                    <li><a href="{{ path('iut_admin_tabCoins')}}" class="waves-effect">Coins</a>
-                                    </li>
-                                    <li><a href="{{ path('iut_admin_tabCurrencies')}}" class="waves-effect">Currencies</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                            <li><a href="{{ path('iut_admin_addImage') }}" class="waves-effect">Ajouter image</a>
+                            </li>
+                            <li><a href="{{ path('iut_admin_viewImages') }}" class="waves-effect">Afficher toutes les
+                                    images</a>
+                            </li>
+
+                            <li><a href="{{ path('iut_admin_selectedViewImages') }}" class="waves-effect">Afficher les
+                                    images triées</a>
+                            </li>
+                            <li><a href="{{ path('iut_admin_downloadImages') }}" class="waves-effect">Download zip</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <!--/. Side navigation links -->
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-dollar"></i> Monnaie<i
+                                class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="{{ path('iut_admin_addCurrencies') }}" class="waves-effect">Ajouter devise</a>
+                            </li>
+                            <li><a href="{{ path('iut_admin_addCoins') }}" class="waves-effect">Ajouter pièce</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-user"></i> Mon profil<i
+                                class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="{{ path('iut_admin_modProfil') }}" class="waves-effect">Modifier profil</a>
+                            </li>
+                            <li><a href="{{ path('iut_admin_addFile') }}" class="waves-effect">Ajouter fichier</a>
+                            </li>
+                            <li><a href="{{ path('fos_user_change_password') }}" class="waves-effect">Modifier mot de
+                                    passe</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-database"></i>Tables<i
+                                class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="{{ path('iut_admin_tabUsers') }}" class="waves-effect"> Users</a>
+                            </li>
+                            <li><a href="{{ path('iut_admin_tabImages') }}" class="waves-effect"> Images</a>
+                            </li>
+                            <li><a href="{{ path('iut_admin_tabFiles') }}" class="waves-effect">Files</a>
+                            </li>
+                            <li><a href="{{ path('iut_admin_tabCoins') }}" class="waves-effect">Coins</a>
+                            </li>
+                            <li><a href="{{ path('iut_admin_tabCurrencies') }}" class="waves-effect">Currencies</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            </li>
+            <!--/. Side navigation links -->
             </ul>
             <div class="sidenav-bg mask-strong"></div>
         </div>
         <!--/. Sidebar navigation -->
 
 
-
         <!-- Navbar -->
         <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg white  scrolling-navbar double-nav">
             <!-- SideNav slide-out button -->
             <div class="float-left">
-                <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars" style="color:#303032"></i></a>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"
+                                                                                  style="color:#303032"></i></a>
             </div>
             <!-- Breadcrumb-->
             <div class="breadcrumb-dn mr-auto text-dark">
-                <p><a href="{{ path('iut_admin_homepage') }}" class="text-dark"> Erobot <i class="fa fa-chevron-right"></i> Dashboard</a> <i class="fa fa-chevron-right"></i> {% block breadcrumb %}{% endblock %}</p >
+                <p><a href="{{ path('iut_admin_homepage') }}" class="text-dark"> Erobot <i
+                                class="fa fa-chevron-right"></i> Dashboard</a> <i
+                            class="fa fa-chevron-right"></i> {% block breadcrumb %}{% endblock %}</p>
             </div>
 
             <!-- deconnexion -->
-            <a href="" id="decolink">Déconnexion</a>
+            <a href="{{ path('iut_admin_homepage') }}">
+                <div class="text-dark mr-5"><i class="fa fa-user"></i> {{ app.user.username }}</div>
+            </a>
+            <a href="{{ path('fos_user_security_logout') }}" id="decolink" class="mr-3"> <i class="fa fa-sign-out"></i>
+                Déconnexion</a>
         </nav>
 
         <!-- /.Navbar -->
@@ -134,17 +151,17 @@
 
 {% block body %}
 
-<main>
-    {% block main %}
+    <main>
+        {% block main %}
 
 
 
 
 
 
-    {% endblock %}
+        {% endblock %}
 
-</main>
+    </main>
 
 
 {% endblock %}

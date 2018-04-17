@@ -2,9 +2,9 @@ iut_admin_homepage:
     path:     /home
     defaults: { _controller: IUTAdminBundle:Admin:home }
 
-iut_admin_connect:
-    path:     /
-    defaults: { _controller: IUTAdminBundle:Admin:connect }
+iut_admin_selectedViewImages:
+    path:     /voir/images/triées
+    defaults: { _controller: IUTAdminBundle:Admin:selectedViewImages }
 
 iut_admin_modProfil:
     path:     /modifier/profil
@@ -14,17 +14,30 @@ iut_admin_addCurrencies:
     path:     /ajouter/devise
     defaults: { _controller: IUTAdminBundle:Admin:addCurrencies }
 
+iut_admin_delete:
+    path:     /supprimer/{classe}/{id}
+    defaults: { _controller: IUTAdminBundle:Admin:delete }
+
+iut_admin_viewImages:
+    path:     /voir/Images
+    defaults: { _controller: IUTAdminBundle:Admin:viewImages }
+
 iut_admin_addCoins:
     path:     /ajouter/piece
     defaults: { _controller: IUTAdminBundle:Admin:addCoins }
 
-iut_admin_modPass:
-    path:     /modifier/motdepasse
-    defaults: { _controller: IUTAdminBundle:Admin:modPass }
 
 iut_admin_tabUsers:
     path:     /table/utilisateurs
     defaults: { _controller: IUTAdminBundle:Admin:tabUsers }
+
+iut_admin_addFile:
+    path:     /ajouter/fichier
+    defaults: { _controller: IUTAdminBundle:Admin:addFile }
+
+iut_admin_addImage:
+    path:     /ajouter/image
+    defaults: { _controller: IUTAdminBundle:Admin:addImage }
 
 iut_admin_tabImages:
     path:     /table/images
@@ -41,3 +54,7 @@ iut_admin_tabCoins:
 iut_admin_tabCurrencies:
     path:     /table/devises
     defaults: { _controller: IUTAdminBundle:Admin:tabCurrencies }
+
+iut_admin_downloadImages:
+    path:     /download
+    defaults: { _controller: IUTAdminBundle:Admin:downloadImages }

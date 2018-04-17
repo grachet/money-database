@@ -1,5 +1,8 @@
 input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=search-md]:focus:not([readonly]), input[type=search]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=url]:focus:not([readonly]), textarea.md-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #FF9800!important;
+    border-right: none!important;
+    border-left: none!important;
+    border-top: none!important;
     box-shadow: 0 1px 0 0 #FF9800!important;
 }
 
@@ -8,3 +11,11 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
 .md-form textarea[type=text]:focus:not([readonly]) + label { color: #FF9800!important; }
 .md-form input[type=password]:focus:not([readonly]) + label { color: #FF9800!important; }
 
+.checkbox-rounded [type="checkbox"][class*='filled-in']+label:after {
+    border-radius: 50%;
+}
+
+.checkbox-warning-filled [type="checkbox"][class*='filled-in']:checked+label:after {
+    border-color: #FF8800;
+    background-color: #FF8800;
+}

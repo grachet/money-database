@@ -23,7 +23,8 @@
                 <th>Login</th>
                 <th>Name</th>
                 <th>Description</th>
-                <th>Url de l'Image</th>
+                <th>Image</th>
+                <th>Email</th>
             </tr>
             </thead>
             <!--Table head-->
@@ -34,10 +35,11 @@
             <tr>
 
                 <td>{{ user.id }}</td>
-                <td>{{ user.login }}</td>
+                <td>{{ user.username }}</td>
                 <td>{{ user.name }}</td>
                 <td>{{ user.description }}</td>
-                <td>{{ user.urlPicture }}</td>
+                <td>{{ user.image }}</td>
+                <td>{{ user.email }}</td>
 
             </tr>
             {% endfor  %}

@@ -28,12 +28,22 @@ class Coins
      */
     private $value;
 
+
     /**
-     * @ORM\ManyToOne(targetEntity="IUT\AdminBundle\Entity\Currencies")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToMany(targetEntity="IUT\AdminBundle\Entity\Images", mappedBy="Coins")
+     */
+    private $Images;
+
+    public function __construct() {
+        $this->Images = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="IUT\AdminBundle\Entity\Currencies", inversedBy="Coins")
+     * @ORM\JoinColumn(name="Currencies_id", referencedColumnName="id")
      */
     private $Currencies;
-
 
     /**
      * Get id
@@ -91,5 +101,39 @@ class Coins
     public function getCurrencies()
     {
         return $this->Currencies;
+    }
+
+    /**
+     * Add image
+     *
+     * @param \IUT\AdminBundle\Entity\Images $image
+     *
+     * @return Coins
+     */
+    public function addImage(\IUT\AdminBundle\Entity\Images $image)
+    {
+        $this->Images[] = $image;
+
+        return $this;
+    }
+
+    /**
+     * Remove image
+     *
+     * @param \IUT\AdminBundle\Entity\Images $image
+     */
+    public function removeImage(\IUT\AdminBundle\Entity\Images $image)
+    {
+        $this->Images->removeElement($image);
+    }
+
+    /**
+     * Get images
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getImages()
+    {
+        return $this->Images;
     }
 }

@@ -126,14 +126,22 @@ class LoadCategory implements FixtureInterface
                 $coin->setValue($coins[$j]);
                 $coin->setCurrencies($currencie);
 
+
+
                 $image = new Images();
                 $image->setName($coin->getValue());
-                $image->setUrl("https://cdn.pixabay.com/photo/2013/07/12/12/14/euro-145386_960_720.png");
-                $image->setCoins($coin);
+                $image->setUrl("http://www.echecspourtous.com/Images/Images_Pages/Variantes/Fischer/piece_2euros.jpg");
+                $image->addCoin($coin);
+
+                $cointest = new Coins();
+                $cointest->setValue(30);
+                $cointest->setCurrencies($currencie);
+                $image->addCoin($cointest);
 
 
 
 $manager->persist($image);
+                $manager->persist($cointest);
                 $manager->persist($coin);
             }
 

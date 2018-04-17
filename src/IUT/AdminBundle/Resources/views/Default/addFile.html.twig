@@ -1,0 +1,111 @@
+{% extends "IUTAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Ajouter  Fichier {{ parent() }}
+{% endblock %}
+
+{% block breadcrumb %}
+    Ajouter <i class="fa fa-chevron-right"></i> Fichier
+{% endblock %}
+
+
+
+{% block main %}
+
+    <div class="row">
+        <!--Grid column-->
+        <div class="col-md-4 ">
+
+            {% for file in listFiles %}
+                <!--Panel-->
+                <div class="card card-body mb-4">
+                    <h4 class="card-title">{{ file.name }}</h4>
+                    <p class="card-text">{{ file.description }}</p>
+                    <div class="flex-row ">
+                        <a href="{{ asset('uploads/files/' ~ file.nameFile) }}" target="_blank" class="card-link text-warning"><i
+                                    class="fa fa-file-pdf-o"></i> PDF</a>    
+                        <a href="{{ path('iut_admin_delete',{'id': file.id, 'classe': 'Files'}) }}" class="text-warning">Supprimer</a>
+                    </div>
+                </div>
+                <!--/.Panel-->
+
+            {% endfor %}
+
+        </div>
+        <!--Grid column-->
+
+
+        <!-- Grid column -->
+        <div class="col-md-8 mt-5">
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-warning" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            <!--Panel-->
+            <div class="card card-body mb-4">
+                <p class="h4 text-center mb-4">Ajouter un fichier (2mo max)</p>
+                {{ form_start(form) }}
+
+                {# Les erreurs générales du formulaire. #}
+                {{ form_errors(form) }}
+
+
+
+                {# Génération manuelle et éclatée : #}
+                <div class="md-form mb-5">
+                    {# Génération du label. #}
+                    {{ form_label(form.name, "Nom") }}
+
+                    {# Affichage des erreurs pour ce champ précis. #}
+                    {{ form_errors(form.name) }}
+
+
+                    {# Génération de l'input. #}
+                    {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+
+                </div>
+
+                <div class="md-form mb-5">
+                    {# Génération du label. #}
+                    {{ form_label(form.description, "Description") }}
+
+                    {# Affichage des erreurs pour ce champ précis. #}
+                    {{ form_errors(form.description) }}
+
+
+                    {# Génération de l'input. #}
+                    {{ form_widget(form.description, {'attr': {'class': 'md-textarea form-control'}}) }}
+
+                </div>
+
+                <div class="md-form mb-5">
+
+                    <div class="file-field">
+                        <div class="btn btn-orange btn-sm float-left">
+                            <span>Choisir un pdf</span>
+                            {{ form_widget(form.file, {'attr': {'class': ''}}) }}
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Envoyer votre fichier sur le serveur">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                {{ form_widget(form.Ajouter, {'attr': {'class': 'btn btn-orange'}}) }}
+
+                {{ form_rest(form) }}
+
+                {{ form_end(form) }}
+            </div>
+            <!--/.Panel-->
+        </div>
+    </div>
+
+
+{% endblock %}
+
