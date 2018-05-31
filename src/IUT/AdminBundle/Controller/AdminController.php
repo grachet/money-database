@@ -20,6 +20,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\BrowserKit\Response;
+use Symfony\Component\Validator\Constraints\File;
 
 class AdminController extends Controller
 {
@@ -49,10 +50,22 @@ class AdminController extends Controller
         $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $user);
 
         $formBuilder
-            ->add('name', TextType::class)
-            ->add('description', TextareaType::class)
-            ->add('imageFile', FileType::class)
-            ->add('email', TextType::class)
+            ->add('name', TextType::class, array('required' => false))
+            ->add('description', TextareaType::class, array('required' => false))
+            ->add('imageFile', FileType::class, [
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '1M',
+                        'mimeTypes' => [
+                            'image/png',
+                            'image/jpeg',
+                        ],
+                        'mimeTypesMessage' => "Le fichier n'est pas une image jpg ou png",
+                    ])
+                ]
+            ])
+            ->add('email', TextType::class, array('required' => false))
             ->add('Enregistrer', SubmitType::class);
 
         $form = $formBuilder->getForm();
@@ -303,9 +316,21 @@ class AdminController extends Controller
         $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $file);
 
         $formBuilder
-            ->add('name', TextType::class)
-            ->add('description', TextareaType::class)
-            ->add('file', FileType::class)
+            ->add('name', TextType::class, array('required' => false))
+            ->add('description', TextareaType::class, array('required' => false))
+            ->add('file', FileType::class, [
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '2M',
+                        'mimeTypes' => [
+                            'application/pdf',
+                            'application/x-pdf',
+                        ],
+                        'mimeTypesMessage' => "Le fichier n'est pas un PDF",
+                    ])
+                ]
+            ])
             ->add('Ajouter', SubmitType::class);
 
         $form = $formBuilder->getForm();
@@ -349,7 +374,19 @@ class AdminController extends Controller
                 return strtoupper($coins->getValue()) . " " . strtoupper($coins->getCurrencies()->getName()) . "                ";
             }, 'multiple' => true,
                 'expanded' => true,))
-            ->add('imageFile', FileType::class)
+            ->add('imageFile', FileType::class, [
+                'required' => true,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '2M',
+                        'mimeTypes' => [
+                            'image/png',
+                            'image/jpeg',
+                        ],
+                        'mimeTypesMessage' => "Le fichier n'est pas une image jpg ou png",
+                    ])
+                ]
+            ])
             ->add('Ajouter', SubmitType::class);
 
         $form = $formBuilder->getForm();

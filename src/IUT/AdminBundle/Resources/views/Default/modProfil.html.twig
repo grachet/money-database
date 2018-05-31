@@ -13,114 +13,94 @@
 {% block main %}
 
     <div class="row">
-<!--Grid column-->
-<div class="col-md-4 ">
+        <div class="col-md-4 ">
 
 
-    <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
+            <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
 
-        <!--Card image-->
-        <div class="view white">
-            <img src="{{ asset('uploads/images/' ~ user.image) }}"
-                 class="img-fluid" alt="photo de profil">
-        </div>
-        <!--/.Card image-->
-
-        <!--Card content-->
-        <div class="card-body">
-            <!--Title-->
-            <h4 class="card-title">{{ user.name }}</h4>
-            <!--Text-->
-            <p class="card-text">{{ user.description }}</p>
+                <div class="view white">
+                    <img src="{{ asset('uploads/images/' ~ user.image) }}"
+                         class="img-fluid" alt="photo de profil">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ user.name }}</h4>
+                    <p class="card-text">{{ user.description }}</p>
 
 
+                </div>
 
-        </div>
-        <!--/.Card content-->
-
-    </div>
-
-
-</div>
-<!--Grid column-->
-
-
-<!-- Grid column -->
-<div class="col-md-8 mt-5">
-    {% for label, messages in app.flashes %}
-        {% for message in messages %}
-            <div class="alert alert-warning" role="alert">
-                {{ message }}
             </div>
-        {% endfor %}
-    {% endfor %}
-    <!--Panel-->
-    <div class="card card-body mb-4">
-        <p class="h4 text-center mb-4">Modifier votre profil</p>
-        {{ form_start(form) }}
 
-        {# Les erreurs générales du formulaire. #}
-        {{ form_errors(form) }}
-
-
-
-        {# Génération manuelle et éclatée : #}
-        <div class="md-form mb-5">
-            {# Génération du label. #}
-            {{ form_label(form.name, "Votre nom") }}
-
-            {# Affichage des erreurs pour ce champ précis. #}
-            {{ form_errors(form.name) }}
-
-
-                {# Génération de l'input. #}
-                {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
 
         </div>
+        <div class="col-md-8 mt-5">
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-warning" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            <div class="card card-body mb-4">
+                <p class="h4 text-center mb-4">Modifier votre profil   (photo .png ou .jpg de 1mo) </p>
+                <a href="https://tinypng.com/" class="text-center text-warning" target="_blank">Compresseur en ligne</a>
+                {{ form_start(form) }}
 
-        <div class="md-form mb-5">
+                {{ form_errors(form) }}
 
-            {{ form_label(form.description, "Votre description") }}
+                <div class="md-form mb-5">
+                    {{ form_label(form.name, "Votre nom") }}
 
-            {{ form_errors(form.description) }}
+                    {{ form_errors(form.name) }}
 
-            {{ form_widget(form.description, {'attr': {'class': 'md-textarea form-control'}}) }}
+                    {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
 
-        </div>
-
-        <div class="md-form mb-5">
-
-            {{ form_label(form.email, "Votre email") }}
-
-            {{ form_errors(form.email) }}
-
-            {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
-
-        </div>
-
-        {# Génération manuelle et éclatée : #}
-        <div class="md-form mb-5">
-
-            <div class="file-field">
-                <div class="btn btn-orange btn-sm float-left">
-                    <span>Choisir une image</span>
-                    {{ form_widget(form.imageFile, {'attr': {'class': ''}}) }}
                 </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" placeholder="Envoyer votre image de profil sur le serveur">
+
+                <div class="md-form mb-5">
+
+                    {{ form_label(form.description, "Votre description") }}
+
+                    {{ form_errors(form.description) }}
+
+                    {{ form_widget(form.description, {'attr': {'class': 'md-textarea form-control'}}) }}
+
                 </div>
+
+                <div class="md-form mb-5">
+
+                    {{ form_label(form.email, "Votre email") }}
+
+                    {{ form_errors(form.email) }}
+
+                    {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+
+                </div>
+
+                <div class="md-form mb-5">
+
+                    <div class=" alert-warning">
+                        {{ form_errors(form.imageFile, {'attr': {'class': ''}}) }}
+                    </div>
+                    <div class="file-field">
+                        <div class="btn btn-orange btn-sm float-left">
+                            <span>Choisir une image</span>
+                            {{ form_widget(form.imageFile, {'attr': {'class': ''}}) }}
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text"
+                                   placeholder="Envoyer votre image de profil sur le serveur">
+                        </div>
+                    </div>
+                </div>
+
+
+                {{ form_widget(form.Enregistrer, {'attr': {'class': 'btn btn-orange'}}) }}
+
+                {{ form_rest(form) }}
+
+                {{ form_end(form) }}
             </div>
         </div>
-
-
-
-        {{ form_widget(form.Enregistrer, {'attr': {'class': 'btn btn-orange'}}) }}
-
-        {{ form_rest(form) }}
-
-        {{ form_end(form) }}
     </div>
-    <!--/.Panel-->
-</div>
-    </div>
-    {% endblock %}
+{% endblock %}

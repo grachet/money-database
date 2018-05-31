@@ -1,4 +1,3 @@
-
 {% extends "IUTAdminBundle::layout.html.twig" %}
 
 {% block title %}
@@ -14,44 +13,40 @@
     <div class="row mb-3 text-center ">
 
 
-            <div class="col-md-3  mb-2">
-                <a href="{{ path("iut_admin_addCoins") }}">
+        <div class="col-md-3  mb-2">
+            <a href="{{ path("iut_admin_addCoins") }}">
                 <div class="card card-body orange p-2 text-white">
                     <span> <i class="fa fa-circle-o"></i> Pièces : {{ nbCoins }}</span>
                 </div>
-                </a>
-            </div>
+            </a>
+        </div>
 
 
-
-            <div class="col-md-3 ">
-                <a href="{{ path("iut_admin_addCurrencies") }}">
+        <div class="col-md-3 ">
+            <a href="{{ path("iut_admin_addCurrencies") }}">
                 <div class="card card-body orange p-2  mb-2 text-white">
                     <span> <i class="fa fa-dollar"></i> Devises : {{ nbCurrencies }}</span>
                 </div>
-                </a>
-            </div>
+            </a>
+        </div>
 
 
-
-            <div class="col-md-3 ">
-                <a href="{{ path("iut_admin_addImage") }}">
+        <div class="col-md-3 ">
+            <a href="{{ path("iut_admin_addImage") }}">
                 <div class="card card-body orange p-2  mb-2 text-white">
                     <span> <i class="fa fa-image"></i> Images : {{ nbImages }}</span>
                 </div>
-                </a>
-            </div>
+            </a>
+        </div>
 
 
-
-            <div class="col-md-3 ">
-                <a href="{{ path("iut_admin_addFile") }}">
+        <div class="col-md-3 ">
+            <a href="{{ path("iut_admin_addFile") }}">
                 <div class="card card-body orange p-2  mb-2 text-white">
                     <span> <i class="fa fa-file"></i> Fichier : {{ nbFiles }}</span>
                 </div>
-                </a>
-            </div>
-
+            </a>
+        </div>
 
 
     </div>
@@ -63,22 +58,17 @@
 
             <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
 
-                <!--Card image-->
                 <div class="view white">
                     <img src="{{ asset('uploads/images/' ~ app.user.image) }}"
                          class="img-fluid" alt="photo de profil">
                 </div>
-                <!--/.Card image-->
 
-                <!--Card content-->
                 <div class="card-body">
-                    <!--Title-->
                     <h4 class="card-title">Bonjour </h4>
                     <h5>{{ app.user.name }}</h5>
 
 
                 </div>
-                <!--/.Card content-->
 
             </div>
 
@@ -94,12 +84,25 @@
 
 
             {% for file in listFiles %}
-                <!--Panel-->
                 <div class="card card-body mb-2">
-                    <p class="card-text">{{ file.description }}</p>
+
+                    {% if file.name != null %}
+                        <h4 class="card-title">{{ file.name }}</h4>
+                    {% endif %}
+
+                    {% if file.description != null %}
+                        <p class="card-text">{{ file.description }}</p>
+                    {% endif %}
+
+                    {% if file.nameFile != null %}
+                        <div class="flex-row ">
+                            <a href="{{ asset('uploads/files/' ~ file.nameFile) }}" target="_blank"
+                               class="card-link text-warning"><i
+                                        class="fa fa-file-pdf-o"></i> PDF</a>    
+                        </div>
+                    {% endif %}
 
                 </div>
-                <!--/.Panel-->
 
             {% endfor %}
 

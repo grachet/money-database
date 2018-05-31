@@ -12,14 +12,13 @@
 {% block main %}
 
     <div class="d-flex align-content-around flex-wrap">
-    {% for image in listImages %}
+        {% for image in listImages %}
 
             <div class="col-md-3 p-2">
 
 
                 <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
 
-                    <!--Card image-->
                     <div class="view white">
                         <img src="{{ asset('uploads/images/' ~ image.image) }}"
                              class="img-fluid" alt="image de pièce">
@@ -27,25 +26,23 @@
                             <div class="mask rgba-white-slight"></div>
                         </a>
                     </div>
-                    <!--/.Card image-->
 
-                    <!--Card content-->
                     <div class="card-body">
-                        <!--Title-->
                         <h5 class="card-title"> Id : {{ image.id }}     Nom : {{ image.name }}</h5>
-                        <!--Text-->
-                        <a href="{{ asset('uploads/images/' ~ image.image) }}"    download style="color: #000"><i class="fa fa-download"></i></a>  
-                        <a href="{{ path('iut_admin_delete', {'id': image.id, 'classe': "Images" })}}"  style="color: #000"><i class="fa fa-remove"></i></a>
+
+                        <a href="{{ asset('uploads/images/' ~ image.image) }}" download style="color: #000"><i
+                                    class="fa fa-download"></i></a>  
+                        <a href="{{ path('iut_admin_delete', {'id': image.id, 'classe': "Images" }) }}"
+                           style="color: #000"><i class="fa fa-remove"></i></a>
 
 
                     </div>
-                    <!--/.Card content-->
 
                 </div>
 
 
-        </div>
-        <!--Grid column-->
-    {% endfor %}
+            </div>
+            <!--Grid column-->
+        {% endfor %}
     </div>
 {% endblock %}

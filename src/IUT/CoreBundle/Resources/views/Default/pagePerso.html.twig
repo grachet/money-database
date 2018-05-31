@@ -95,11 +95,21 @@
                     {% for file in listFiles %}
                         <!--Panel-->
                         <div class="card card-body mb-4">
-                            <h4 class="card-title">{{ file.name }}</h4>
-                            <p class="card-text">{{ file.description }}</p>
+                            {% if file.name != null %}
+                                <h4 class="card-title">{{ file.name }}</h4>
+                            {% endif %}
+
+                            {% if file.description != null %}
+                                <p class="card-text">{{ file.description }}</p>
+                            {% endif %}
+
                             <div class="flex-row ">
-                                <a href="{{ asset('uploads/files/' ~ file.nameFile) }}" target="_blank" class="card-link text-warning"><i
-                                            class="fa fa-file-pdf-o "></i> PDF</a>
+                                {% if file.nameFile != null %}
+
+                                    <a href="{{ asset('uploads/files/' ~ file.nameFile) }}" target="_blank" class="card-link text-warning"><i
+                                                class="fa fa-file-pdf-o"></i> PDF</a>    
+
+                                {% endif %}
                             </div>
                         </div>
                         <!--/.Panel-->

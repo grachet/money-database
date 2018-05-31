@@ -13,19 +13,15 @@
 {% block main %}
 
     <div class="card card-body mb-4">
-        <!--Table-->
         <table class="table table-hover">
 
-            <!--Table head-->
             <thead>
             <tr class="orange lighten-3">
                 <th>Id</th>
                 <th>Name</th>
             </tr>
             </thead>
-            <!--Table head-->
 
-            <!--Table body-->
             <tbody>
             {% for currencies in listCurrencies %}
                 <tr>
@@ -33,12 +29,10 @@
                     <td>{{ currencies.id }}</td>
                     <td>{{ currencies.name }}</td>
                 </tr>
-            {% endfor  %}
+            {% endfor %}
             </tbody>
-            <!--Table body-->
 
         </table>
-        <!--Table-->
     </div>
 
 {% endblock %}

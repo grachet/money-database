@@ -13,14 +13,11 @@
 {% block main %}
 
     <div class="row">
-        <!--Grid column-->
         <div class="col-md-4 ">
 
             <div class="card card-body mb-4">
-                <!--Table-->
                 <table class="table table-hover">
 
-                    <!--Table head-->
                     <thead>
                     <tr class="orange lighten-3">
 
@@ -36,23 +33,19 @@
                         <tr>
 
                             <td>{{ currencie.name }}</td>
-                            <td><a href="{{ path('iut_admin_delete',{'id': currencie.id, 'classe': 'Currencies'}) }}"><i class="fa fa-remove"></a></i></td>
+                            <td><a href="{{ path('iut_admin_delete',{'id': currencie.id, 'classe': 'Currencies'}) }}"><i
+                                            class="fa fa-remove"></a></i></td>
 
                         </tr>
                     {% endfor %}
                     </tbody>
-                    <!--Table body-->
 
                 </table>
-                <!--Table-->
             </div>
 
 
         </div>
-        <!--Grid column-->
 
-
-        <!-- Grid column -->
         <div class="col-md-8 mt-5">
             {% for label, messages in app.flashes %}
                 {% for message in messages %}
@@ -61,26 +54,18 @@
                     </div>
                 {% endfor %}
             {% endfor %}
-            <!--Panel-->
             <div class="card card-body mb-4">
                 <p class="h4 text-center mb-4">Ajouter une devise</p>
                 {{ form_start(form) }}
 
-                {# Les erreurs générales du formulaire. #}
                 {{ form_errors(form) }}
 
 
-
-                {# Génération manuelle et éclatée : #}
                 <div class="md-form mb-5">
-                    {# Génération du label. #}
                     {{ form_label(form.name, "Nom") }}
 
-                    {# Affichage des erreurs pour ce champ précis. #}
                     {{ form_errors(form.name) }}
 
-
-                    {# Génération de l'input. #}
                     {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
 
                 </div>
@@ -92,7 +77,6 @@
 
                 {{ form_end(form) }}
             </div>
-            <!--/.Panel-->
         </div>
     </div>
 {% endblock %}
