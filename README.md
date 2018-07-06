@@ -1,6 +1,6 @@
 # Erobot 
 
----
+
 Currency database with personal pages and publications in Symfony 3.2 (end of year project)
 
 ---
