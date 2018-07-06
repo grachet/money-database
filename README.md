@@ -1,40 +1,34 @@
 Erobot 
 ========================
-
-Banque d'images de monnaie avec pages personnelles et publications sous Symfony 3.2 (projet de fin d'année)
+Currency database with personal pages and publications in Symfony 3.2 (end of year project)
 ========================
 
 
-1. Récupérer le code
+1. Get the code
 
-Vous avez deux solutions pour le faire :
+* git clone https://github.com/grachet/erobot.git
 
-Via Git, en clonant ce dépôt
 
-Via le téléchargement du code source en une archive ZIP
+2. Define parameters (password...)
 
-2. Définir vos paramètres d'application
+* Modify app/config/parameters.yml
 
-Pour ne pas qu'on se partage tous nos mots de passe, vous devez modifier le fichier app/config/parameters.yml
+3. Download vendors
 
-3. Télécharger les vendors
+* composer install
 
-Avec Composer bien évidemment : 
 
-php composer.phar install
+4. Create Database
 
-4. Créez la base de données
+* php bin/console doctrine:database:create
 
-php bin/console doctrine:database:create
+* php bin/console doctrine:schema:update --dump-sql
 
-php bin/console doctrine:schema:update --dump-sql
+* php bin/console doctrine:schema:update --force
 
-php bin/console doctrine:schema:update --force
+* php bin/console doctrine:fixtures:load
 
-php bin/console doctrine:fixtures:load
 
-5. Publiez les assets
-
-Publiez les assets dans le répertoire web :
+5. Publish assets in /web 
 
 php bin/console assets:install web
