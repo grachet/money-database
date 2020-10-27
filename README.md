@@ -1,4 +1,4 @@
-# Money picture database
+# Currency database
 
 
 Currency database with personal pages and publications in Symfony 3.2
